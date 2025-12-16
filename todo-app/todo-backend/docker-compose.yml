@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  todo-backend:
+    build: .
+    container_name: todo-backend-compose
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
